@@ -1,0 +1,35 @@
+{
+  "name": "entrefios_server",
+  "version": "1.0.0",
+  "description": "servidor de arquivos para o site da entrefios stm",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index",
+    "dev": "nodemon dist/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saulotarsobc/entrefios_server.git"
+  },
+  "keywords": [
+    "entrefios",
+    "stm",
+    "node",
+    "ts"
+  ],
+  "author": "https://github.com/saulotarsobc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saulotarsobc/entrefios_server/issues"
+  },
+  "homepage": "https://github.com/saulotarsobc/entrefios_server#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "typescript": "^4.8.4"
+  }
+}
