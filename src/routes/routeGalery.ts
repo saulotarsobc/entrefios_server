@@ -1,11 +1,18 @@
-import express from 'express';
+import { Router, Request, Response } from 'express';
+import multer from 'multer';
+
+const upload = multer({
+    dest: 'uploads/'
+})
 
 /* server */
-const routeGalery = express();
+const routeGalery = Router();
 
-routeGalery.post('/save', (req, res) => {
+routeGalery.post('/save', upload.single('product'), (req: Request, res: Response) => {
     res.json({
-        url: req.originalUrl
+        body: req.body.token,
+        url: req.originalUrl,
+        file: req.file
     })
 });
 

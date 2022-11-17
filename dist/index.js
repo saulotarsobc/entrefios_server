@@ -11,7 +11,7 @@ const validaToken_1 = __importDefault(require("./middlewares/validaToken"));
 /* server */
 const server = (0, express_1.default)();
 /* middlewares */
-server.use(body_parser_1.default.json());
+server.use(body_parser_1.default.urlencoded({ extended: false }));
 server.use(validaToken_1.default);
 /* imports routes */
 const routeGalery_1 = __importDefault(require("./routes/routeGalery"));

@@ -1,16 +1,16 @@
 require("dotenv").config();
-import express from 'express';
+import { Router, NextFunction, Request, Response } from 'express';
 
-const validaToken = express();
+const validaToken = Router();
 
-validaToken.use((req, res, next) => {
-    if (req.body.token == process.env.TOKEN) {
-        next();
-    } else {
-        res.status(401).json({
-            msg: 'invalid token'
-        });
-    }
+validaToken.use((req: Request, res: Response, next: NextFunction) => {
+    next();
+    res.json({
+        body: req.body.token,
+        url: req.originalUrl,
+        file: req.file,
+        oi: 'oioi'
+    });
 });
 
 export default validaToken;

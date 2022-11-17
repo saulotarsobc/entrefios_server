@@ -9,7 +9,7 @@ import validaToken from './middlewares/validaToken';
 const server = express();
 
 /* middlewares */
-server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: false }));
 server.use(validaToken);
 
 /* imports routes */
